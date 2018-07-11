@@ -105,6 +105,64 @@
 
 		git rm xxx
 
+8. 添加远程仓库
 
-			
-		 
+	8.1 关联远程仓库
+		
+		git remote add origin xxx:xxx(git@github.com:michaelliao/learngit.git)
+
+	8.2 删除关联
+
+		git remote rm xxx
+		
+	8.3 推送
+
+		git push -u origin master(只需在第一次提交加时加 -u 参数)			
+
+9. 克隆仓库
+
+	9.1 克隆仓库
+
+		git clone xxx@xxx(git@github.com:michaelliao/learngit.git)
+
+10. 分支管理
+
+	10.1 创建分支
+
+		git branch xxx
+		exp:
+			创建名为 dev 的分支
+				1.git branch dev
+
+	10.2 切换分支
+
+		git checkout xxx
+		exp:
+			切换到名为 dev 的分支
+
+	10.3 查看分支
+
+		git branch
+		exp:
+			* dev
+  			  master
+              当前分支前标有 * 号
+
+   	10.4 创建并切换分支(10.1 + 10.2)
+
+		 git checkout -b xxx
+
+	10.5 合并分支
+
+		git merge xxx
+		exp:
+			合并 dev 分支到当前分支
+				git merge dev
+		会出现分支合并失败的可能,需手动解决冲突后提交成能完成合并
+		
+	10.6 删除分支
+
+		git branch -d xxx
+		exp:
+			删除名为 dev 的分支
+				git branch -d dev 
